@@ -1,60 +1,118 @@
-**IPL Player Valuation**
-A Business Analytics case study on evaluating IPL player performance in relation to 2025 auction prices.
-Overview
-This project analyzes IPL player performance statistics and 2025 auction prices to study performance-price efficiency in franchise cricket.
-The analysis has two main components:
-1. Player Performance Classification — classify players into performance tiers using batting and bowling statistics.
-2. Performance-Price Analysis — compare player performance with auction price to identify relatively high-value and high-cost acquisitions.
-The results are intended to provide data-driven insights that can support player shortlisting and auction budget planning.
-Objectives
-- Classify IPL players based on their observed performance.
-- Analyze the relationship between player performance and 2025 auction price.
-- Identify performance-price patterns that can support auction decision-making.
-Data Sources
-Player performance data is collected from ESPNcricinfo Statsguru using Selenium and BeautifulSoup.
-Auction information is collected from the 2025 IPL personnel and auction tables on Wikipedia.
-The project uses publicly available data and does not use a ready-made Kaggle, UCI, or similar dataset as its primary data source.
-Methodology
-The project follows this workflow:
-Web Scraping
-     ↓
-Data Cleaning
-     ↓
-Data Integration
-     ↓
-Exploratory Data Analysis
-     ↓
-Performance Scoring
-     ↓
-Performance Classification
-     ↓
-Performance vs Price Analysis
-     ↓
-Clustering
-     ↓
-Business Insights
-The planned machine learning methods include Logistic Regression / Random Forest for performance classification and K-Means clustering for performance-price analysis.
-Dataset
+# IPL Player Valuation
+
+A Business Analytics project that analyzes IPL player performance and 2025 auction prices to study player value and performance-price relationships.
+
+## Project Overview
+
+Player auctions in franchise cricket involve decisions about performance, reputation, and budget allocation. This project uses publicly available IPL data to analyze player performance in relation to their 2025 auction price.
+
+The project combines batting and bowling statistics with auction information to develop a data-driven view of player performance and price efficiency.
+
+The analysis focuses on:
+
+- Classifying players based on their observed performance
+- Comparing player performance with their auction price
+- Identifying performance-price patterns
+- Generating insights that can support auction planning and player shortlisting
+
+## Objectives
+
+1. Classify IPL players into performance tiers using batting and bowling statistics.
+2. Analyze the relationship between player performance and their 2025 auction price.
+3. Identify players and performance-price patterns that can provide useful insights for auction decision-making.
+
+## Data Sources
+
+### Player Performance Data
+
+Player batting and bowling statistics are collected from **ESPNcricinfo Statsguru** using web scraping with Selenium and BeautifulSoup.
+
+### Auction Data
+
+2025 IPL auction information is collected from the **2025 IPL personnel and auction tables on Wikipedia**.
+
+The project collects and integrates the data instead of using a ready-made Kaggle, UCI, or GitHub dataset as the primary dataset.
+
+## Dataset
+
 The integrated dataset contains player-level batting, bowling, and auction information.
-Key performance variables include:
+
+### Batting Attributes
+
+- Matches
+- Innings
 - Runs
-- Batting average
-- Strike rate
-- Wickets
-- Bowling average
-- Economy rate
-- Bowling strike rate
-- Fours and sixes
-- 4-wicket and 5-wicket hauls
+- Highest Score
+- Batting Average
+- Balls Faced
+- Strike Rate
+- Centuries
+- Half-centuries
+- Fours
+- Sixes
+
+### Bowling Attributes
+
+- Innings
+- Overs
 - Maidens
-Auction-related variables include:
-- Base price
-- 2025 auction price
-- 2025 IPL team
-- Player role
+- Runs Conceded
+- Wickets
+- Best Bowling
+- Bowling Average
+- Economy Rate
+- Bowling Strike Rate
+- 4-Wicket Hauls
+- 5-Wicket Hauls
+
+### Auction Attributes
+
+- Player
 - Country
-The current integrated dataset contains 164 matched players.
-Project Structure
+- Role
+- Base Price
+- 2025 Auction Price
+- Auction Team
+
+The current integrated dataset contains **164 matched players**.
+
+## Methodology
+
+The project follows the following workflow:
+
+1. **Data Collection**
+   - Scrape IPL batting and bowling statistics
+   - Collect 2025 auction information
+
+2. **Data Preprocessing**
+   - Clean column names and values
+   - Handle missing values
+   - Remove unnecessary columns
+   - Integrate batting, bowling, and auction data
+
+3. **Exploratory Data Analysis**
+   - Analyze player performance distributions
+   - Examine relationships between performance variables
+   - Analyze auction price distributions
+   - Study the relationship between performance and price
+
+4. **Performance Analysis**
+   - Construct performance measures using relevant batting and bowling statistics
+   - Classify players into performance tiers
+
+5. **Performance-Price Analysis**
+   - Compare player performance with 2025 auction price
+   - Identify different performance-price patterns
+   - Apply clustering to analyze player groups
+
+6. **Business Insights**
+   - Identify high-value performance-price combinations
+   - Analyze expensive players in relation to their observed performance
+   - Derive insights relevant to auction planning
+
+## Project Structure
+
+```text
 ipl-player-valuation/
 │
 ├── data/
@@ -66,36 +124,15 @@ ipl-player-valuation/
 │   └── analysis.ipynb
 │
 ├── scraper/
+│   ├── __init__.py
 │   ├── config.py
 │   ├── scraper.py
 │   ├── parser.py
-│   ├── auction_scraper.py
 │   ├── auction_parser.py
+│   ├── auction_scraper.py
 │   ├── merge_data.py
 │   ├── utils.py
 │   └── requirements.txt
 │
 ├── main.py
 └── README.md
-Key Output
-The analysis aims to produce a player-level view containing:
-- Performance score
-- Performance tier
-- 2025 auction price
-- Performance-price cluster
-- Value interpretation
-The project is a retrospective analysis of observed performance and auction price. It is intended to support future auction decisions rather than predict future player performance.
-Note
-Retained players are treated separately from players purchased during the 2025 auction, since retained players do not have a 2025 auction purchase price.
-Tools & Technologies
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- BeautifulSoup
-- Selenium
-- Matplotlib
-- Jupyter Notebook
-Status
-In progress
-Current work is focused on finalizing the integrated dataset, data preprocessing, exploratory analysis, and the performance-price analysis.

@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.pyc
+logs/
+.ipynb_checkpoints/
+.DS_Store
+.md
+
+# Note: Keeping data/ directory since you may want to push your processed/final datasets
+# If you want to ignore raw data, uncomment the line below:
+# data/raw/

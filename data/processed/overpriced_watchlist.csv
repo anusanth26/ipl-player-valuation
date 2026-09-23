@@ -1,0 +1,11 @@
+Player,Role,Country,Mat,Overall_Score,Performance_Tier,Auction_Price_Cr,Auction_Team,Value_Cluster,Value_Gap,Low_Sample
+Karim Janat,All-rounder,Afghanistan,1,-2.25,Low,0.75,Gujarat Titans,Low-cost / Low-impact,-2.862,1
+Akash Deep,Bowler,India,14,-0.43,Low,8.0,Lucknow Super Giants,High-performing but Expensive,-2.071,0
+VR Iyer,All-rounder,India,69,0.16,Medium,23.75,Kolkata Knight Riders,High-performing but Expensive,-2.063,0
+Gurnoor Brar,Bowler,India,1,-1.07,Low,1.3,Gujarat Titans,Low-cost / Low-impact,-1.594,1
+M Jansen,All-rounder,South Africa,48,-0.13,Low,7.0,Punjab Kings,High-performing but Expensive,-1.539,0
+Fazalhaq Farooqi,Bowler,Afghanistan,12,-0.78,Low,2.0,Rajasthan Royals,Fair-value Mid-market,-1.501,0
+Abdul Samad,All-rounder,India,71,-0.35,Low,4.2,Lucknow Super Giants,Fair-value Mid-market,-1.464,0
+SH Johnson,Bowler,Australia,12,-0.57,Low,2.8,Kolkata Knight Riders,Fair-value Mid-market,-1.455,0
+Mukesh Kumar,Bowler,India,42,0.02,Medium,8.0,Delhi Capitals,High-performing but Expensive,-1.42,0
+T Natarajan,Bowler,India,73,0.26,Medium,10.75,Delhi Capitals,High-performing but Expensive,-1.302,0

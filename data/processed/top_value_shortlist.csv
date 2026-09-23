@@ -1,0 +1,16 @@
+Player,Role,Country,Mat,Overall_Score,Performance_Tier,Auction_Price_Cr,Auction_Team,Value_Cluster,Value_Gap,Low_Sample
+V Sooryavanshi,Batter,India,23,1.73,High,1.1,Rajasthan Royals,Undervalued / High-value,2.546,0
+AM Rahane,Batter,India,212,1.82,High,1.5,Kolkata Knight Riders,Undervalued / High-value,2.44,0
+MK Pandey,Batter,India,180,1.41,High,0.75,Kolkata Knight Riders,Undervalued / High-value,2.383,0
+F du Plessis,Batter,South Africa,154,1.75,High,2.0,Delhi Capitals,Undervalued / High-value,2.127,0
+KL Rahul,Wicket-keeper,India,159,2.66,High,14.0,Delhi Capitals,Undervalued / High-value,1.937,0
+KK Nair,Batter,India,86,0.71,High,0.5,Delhi Capitals,Fair-value Mid-market,1.69,0
+Ashwani Kumar,Bowler,India,10,0.34,Medium,0.3,Mumbai Indians,Low-cost / Low-impact,1.566,0
+RS Hangargekar,All-rounder,India,2,0.31,Medium,0.3,Lucknow Super Giants,Low-cost / Low-impact,1.515,1
+RD Rickelton,Wicket-keeper,South Africa,26,0.93,High,1.0,Mumbai Indians,Fair-value Mid-market,1.484,0
+KV Sharma,Bowler,India,90,0.56,High,0.5,Mumbai Indians,Fair-value Mid-market,1.476,0
+AU Verma,Batter,India,24,0.25,Medium,0.3,Sunrisers Hyderabad,Low-cost / Low-impact,1.426,0
+V Puthur,All-rounder,India,5,0.24,Medium,0.3,Mumbai Indians,Low-cost / Low-impact,1.42,1
+A Taide,Batter,India,10,0.21,Medium,0.3,Sunrisers Hyderabad,Low-cost / Low-impact,1.37,0
+M Markande,Bowler,India,40,0.2,Medium,0.3,Kolkata Knight Riders,Low-cost / Low-impact,1.364,0
+Q de Kock,Wicket-keeper,South Africa,118,1.53,High,3.6,Kolkata Knight Riders,Undervalued / High-value,1.361,0

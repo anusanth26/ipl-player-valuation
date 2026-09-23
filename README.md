@@ -131,8 +131,87 @@ ipl-player-valuation/
 │   ├── auction_parser.py
 │   ├── auction_scraper.py
 │   ├── merge_data.py
+│   ├── player_matching.py
+│   ├── build_final_dataset.py
 │   ├── utils.py
 │   └── requirements.txt
 │
 ├── main.py
 └── README.md
+```
+
+## Scope Decisions (Frozen)
+
+To keep the case study consistent with the approved problem statement,
+the following decisions are treated as fixed unless the teacher explicitly
+requires a change:
+
+1. **Analytical unit is a player.** The final dataset contains
+   **164 players × 31 columns**, representing every player for whom
+   both scraped performance statistics and a 2025 auction purchase
+   price could be matched.
+2. **Retained players are separated from auction purchases.** Only
+   players who were bought at the 2025 auction hold a value in
+   `Auction_Price_Lakh`. Retention values are not used as a substitute
+   for auction price.
+3. **The "≥10,000 records" teacher remark** is addressed by reporting
+   the underlying raw scraped volume (approximately 808 batting rows
+   + 808 bowling rows + 180 auction rows ≈ 1,796 raw records) while
+   keeping the analytical dataset at 164 integrated player-level rows.
+   The dataset is not artificially inflated by duplicating players.
+4. **This is a retrospective performance-vs-price analysis**, not a
+   future-performance prediction model. Findings are used to inform
+   future auction strategy, not to forecast future player output.
+5. **Auction-set tracking is out of scope.** Only auction price,
+   base price, buying team, role, and country are used from the
+   auction source.
+
+## Analytics Methods
+
+The project applies the following methods from the Business Analytics
+syllabus:
+
+- **Descriptive statistics and visual EDA** on batting, bowling and
+  auction-price distributions.
+- **Feature engineering** to construct a transparent, role-aware
+  performance score from standardised batting and bowling metrics.
+- **Supervised classification** (Logistic Regression and Random Forest)
+  to classify players into Low / Medium / High performance tiers, with
+  stratified cross-validation because of the small sample size.
+- **Unsupervised clustering** (K-Means on standardised performance
+  score and log auction price) to group players into value-efficiency
+  clusters such as *Undervalued*, *High-performing but Expensive*,
+  *Potentially Overpriced* and *Low-cost / Low-impact*.
+
+## Results
+
+*To be filled after the notebook analysis is complete.*
+
+Planned outputs:
+
+- Player performance tier classifications and model evaluation table.
+- Value-efficiency cluster table with per-cluster narrative.
+- Shortlist tables (top undervalued acquisitions, potentially
+  overpriced picks) with role and franchise breakdowns.
+
+## Business Recommendations
+
+*To be filled after clustering results are interpreted.*
+
+## References
+
+*To be filled during report writing, together with at least three
+recent published studies for the state-of-the-art comparison.*
+
+## How to Reproduce
+
+```powershell
+# Install dependencies
+pip install -r scraper/requirements.txt
+
+# Run the full scrape + match + build pipeline
+python main.py
+
+# Open the analysis notebook
+jupyter lab notebooks/analysis.ipynb
+```

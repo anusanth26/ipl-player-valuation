@@ -1,11 +1,19 @@
 venv/
+.venv/
 __pycache__/
 *.pyc
 logs/
 .ipynb_checkpoints/
 .DS_Store
-.md
+
+# Planning / handoff docs — kept locally, not pushed
+/Business_Analytics_*.md
+/IMPLEMENTATION_PLAN.md
+/notebooks/README.md
+/report/README.md
+*.docx
 
 # Note: Keeping data/ directory since you may want to push your processed/final datasets
 # If you want to ignore raw data, uncomment the line below:
 # data/raw/
+
